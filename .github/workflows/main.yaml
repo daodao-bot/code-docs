@@ -1,0 +1,35 @@
+name: Action
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+      DOCKER_HUB_NAMESPACE: daodaobot
+      DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+      DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
+      APP_NAME: code-docs
+      APP_VERSION: latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install
+      - name: Static HTML export with docusaurus
+        run: npm run generate
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag $APP_NAME:$APP_VERSION
+      - name: Login Docker Hub
+        run: docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
+      - name: Tag the Docker image
+        run: docker tag $APP_NAME:$APP_VERSION $DOCKER_HUB_NAMESPACE/$APP_NAME:$APP_VERSION
+      - name: Push the Docker Image
+        run: docker push $DOCKER_HUB_NAMESPACE/$APP_NAME:$APP_VERSION
