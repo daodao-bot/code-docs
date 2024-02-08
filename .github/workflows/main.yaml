@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Static HTML export with docusaurus
-        run: npm run generate
+        run: npm run build
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag $APP_NAME:$APP_VERSION
       - name: Login Docker Hub
