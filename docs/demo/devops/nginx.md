@@ -42,31 +42,31 @@ Nginx已经成为许多网站和应用的首选服务器之一，被广泛用于
 
 ### header 路由
 
-需求：编写 nginx 配置，根据 header 中的 X-Client-ID 的值，转发请求到不同的目标服务中。
+需求：编写 nginx 配置，根据 header 中的 X-Client 的值，转发请求到不同的目标服务中。
 
 有 3 组目标服务：
 
-- paas
-    - 192.168.16.23:30245
-    - 192.168.16.23:30246
-- saas
-    - 192.168.16.23:30247
-    - 192.168.16.23:30248
-- cloud
-    - 192.168.16.103:30203
-    - 192.168.16.103:30204
+- xxx
+    - 192.168.16.8:30001
+    - 192.168.16.8:30002
+- yyy
+    - 192.168.16.8:30003
+    - 192.168.16.8:30004
+- zzz
+    - 192.168.16.8:30005
+    - 192.168.16.8:30006
 
-解析 header 中的 X-Client-ID 的值，进行路由：
+解析 header 中的 X-Client 的值，进行路由：
 
-- 当 X-Client-ID 的值是 1 或 2 的时候，转发到 paas
-- 当 X-Client-ID 的值是 3 或 4 的时候，转发到 saas
-- 当 X-Client-ID 的值是其它的时候，转发到 cloud
+- 当 X-Client 的值是 1 或 2 的时候，转发到 xxx
+- 当 X-Client 的值是 3 或 4 的时候，转发到 yyy
+- 当 X-Client 的值是其它的时候，转发到 zzz
 
 实现：
 
-在以下配置中，map 指令将 X-Client-ID 的值映射到相应的后端服务名称。
+在以下配置中，map 指令将 X-Client 的值映射到相应的后端服务名称。
 
-然后，通过 upstream 指令定义了三个不同的后端服务集群：paas、saas 和 cloud。
+然后，通过 upstream 指令定义了三个不同的后端服务集群：xxx、yyy 和 zzz。
 
 最后，在 location / 块中，使用 proxy_pass 将请求转发到相应的后端服务。
 
@@ -74,25 +74,25 @@ Nginx已经成为许多网站和应用的首选服务器之一，被广泛用于
 
 http {
 
-    upstream paas {
-        server 192.168.16.23:30245;
-        server 192.168.16.23:30246;
+    upstream xxx {
+        server 192.168.16.8:30001;
+        server 192.168.16.8:30002;
     }
 
-    upstream saas {
-        server 192.168.16.23:30247;
-        server 192.168.16.23:30248;
+    upstream yyy {
+        server 192.168.16.8:30003;
+        server 192.168.16.8:30004;
     }
 
-    upstream cloud {
-        server 192.168.16.103:30203;
-        server 192.168.16.103:30204;
+    upstream zzz {
+        server 192.168.16.8:30005;
+        server 192.168.16.8:30006;
     }
 
-    map $http_x_client_id $backend {
-        ~^(1|2)$ paas;
-        ~^(3|4)$ saas;
-        default  cloud;
+    map $http_x_client $backend {
+        ~^(1|2)$ xxx;
+        ~^(3|4)$ yyy;
+        default  zzz;
     }
 
     server {
@@ -115,22 +115,20 @@ http {
 
 ```
 
-开发环境 的 k8s 的 saas 名称空间中临时部署了一个 nginx ，开启了 30293 端口，用于测试。
-
 测试命令：
 
 ```bash
 
-curl -i -X POST -H "X-Client-ID:1" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.23:30293/demo/api/demo
+curl -i -X POST -H "X-Client:1" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.8:30001/demo/api/demo
 
-curl -i -X POST -H "X-Client-ID:2" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.23:30293/demo/api/demo
+curl -i -X POST -H "X-Client:2" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.8:30002/demo/api/demo
 
-curl -i -X POST -H "X-Client-ID:3" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.23:30293/demo/api/demo
+curl -i -X POST -H "X-Client:3" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.8:30003/demo/api/demo
 
-curl -i -X POST -H "X-Client-ID:4" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.23:30293/demo/api/demo
+curl -i -X POST -H "X-Client:4" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.8:30004/demo/api/demo
 
-curl -i -X POST -H "X-Client-ID:5" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.23:30293/demo/api/demo
+curl -i -X POST -H "X-Client:5" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.8:30005/demo/api/demo
 
-curl -i -X POST -H "X-Client-ID:6" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.23:30293/demo/api/demo
+curl -i -X POST -H "X-Client:6" -H  "Content-Type:application/json" -d '{"param":{"name":"xxx"}}' http://192.168.16.8:30006/demo/api/demo
 
 ```
