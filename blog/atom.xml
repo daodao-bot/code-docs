@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://daoodao.dev/blog</id>
+    <id>https://daoodao.dev/code-docs/blog</id>
     <title>Code Docs Blog</title>
     <updated>2024-01-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://daoodao.dev/blog"/>
+    <link rel="alternate" href="https://daoodao.dev/code-docs/blog"/>
     <subtitle>Code Docs Blog</subtitle>
-    <icon>https://daoodao.dev/img/favicon.ico</icon>
+    <icon>https://daoodao.dev/code-docs/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[hello world]]></title>
-        <id>https://daoodao.dev/blog/2024/01/01/helllo-world</id>
-        <link href="https://daoodao.dev/blog/2024/01/01/helllo-world"/>
+        <id>https://daoodao.dev/code-docs/blog/2024/01/01/helllo-world</id>
+        <link href="https://daoodao.dev/code-docs/blog/2024/01/01/helllo-world"/>
         <updated>2024-01-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[---]]></summary>
         <content type="html"><![CDATA[<hr>
