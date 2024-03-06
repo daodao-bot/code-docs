@@ -18,6 +18,10 @@ const config: Config = {
   organizationName: 'daodao-bot', // Usually your GitHub org/user name.
   projectName: 'code-docs', // Usually your repo name.
 
+  deploymentBranch: 'main',
+
+  trailingSlash: false,
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
