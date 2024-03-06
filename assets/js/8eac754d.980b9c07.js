@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcode_docs=self.webpackChunkcode_docs||[]).push([[2408],{6702:e=>{e.exports=JSON.parse('{"title":"devops","slug":"/category/devops","permalink":"/docs/category/devops","navigation":{"previous":{"title":"demo","permalink":"/docs/demo/"},"next":{"title":"nginx","permalink":"/docs/demo/devops/nginx"}}}')}}]);
