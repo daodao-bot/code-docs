@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcode_docs=self.webpackChunkcode_docs||[]).push([[5512],{4352:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\u7a0b\u5e8f\u5458\u4e0e\u91d1\u9504\u5934","permalink":"/code-docs/blog/2024/03/08/gold-hoe","unlisted":false},{"title":"hello world","permalink":"/code-docs/blog/2024/01/01/helllo-world","unlisted":false}]}')}}]);

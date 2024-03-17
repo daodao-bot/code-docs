@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcode_docs=self.webpackChunkcode_docs||[]).push([[5584],{4418:e=>{e.exports=JSON.parse('{"title":"Java","slug":"/category/java","permalink":"/code-docs/docs/category/java","navigation":{"previous":{"title":"Language","permalink":"/code-docs/docs/language/"},"next":{"title":"Readme","permalink":"/code-docs/docs/language/java/"}}}')}}]);

@@ -2,16 +2,46 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Code Docs Blog</title>
-        <link>https://daoodao.dev/code-docs/blog</link>
+        <link>https://daodao.bot/code-docs/blog</link>
         <description>Code Docs Blog</description>
-        <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 08 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
-        <language>zh</language>
+        <language>zh-Hans</language>
+        <item>
+            <title><![CDATA[程序员与金锄头]]></title>
+            <link>https://daodao.bot/code-docs/blog/2024/03/08/gold-hoe</link>
+            <guid>https://daodao.bot/code-docs/blog/2024/03/08/gold-hoe</guid>
+            <pubDate>Fri, 08 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[---]]></description>
+            <content:encoded><![CDATA[<hr>
+<p>农民发现了一把金锄头，万分惊喜。</p>
+<p>日复一日，学习高效的锄地技巧，练习优雅的挥舞姿势，乐此不疲。</p>
+<p>然而，地主并不在意农民的农具品质和锄地技术，只会关心土地的粮食产量和地租收益。</p>
+<hr>
+<p>黑铁锄头，青铜锄头，白银锄头，黄金锄头，有什么区别？</p>
+<p>精良装备，卓越装备，史诗装备，传说装备，有什么区别？</p>
+<p>程序员说：给大家分享一下，我的架构设计多么稳健高效！我的代码组织多么简洁优雅！</p>
+<p>这就好像，农民说：你看看，我的锄头多亮！我的姿势多帅！</p>
+<hr>
+<p>出门在外，身份是自己给的。</p>
+<p><strong>程序员</strong> ，自我认同是 <strong>工程师</strong> ，但是国家给的认证是 <strong>农民工</strong> <sup><a href="https://daodao.bot/code-docs/blog/2024/03/08/gold-hoe#user-content-fn-1-e1ea44" id="user-content-fnref-1-e1ea44" data-footnote-ref="true" aria-describedby="footnote-label">1</a></sup> 。</p>
+<p>😂😂😂</p>
+<hr>
+<section data-footnotes="true" class="footnotes"><h2 class="anchor anchorWithStickyNavbar_LWe7 sr-only" id="footnote-label">Footnotes<a href="https://daodao.bot/code-docs/blog/2024/03/08/gold-hoe#footnote-label" class="hash-link" aria-label="Footnotes的直接链接" title="Footnotes的直接链接">​</a></h2>
+<ol>
+<li id="user-content-fn-1-e1ea44">
+<p><a href="http://www.mohrss.gov.cn/SYrlzyhshbzb/jiuye/gzdt/202108/t20210816_420736.html?eqid=de179b8300003fa600000003642e655c" target="_blank" rel="noopener noreferrer">2020年北京市外来新生代农民工监测报告发布 @ 中华人民共和国人力资源和社会保障部</a> <a href="https://daodao.bot/code-docs/blog/2024/03/08/gold-hoe#user-content-fnref-1-e1ea44" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>]]></content:encoded>
+            <author>625117069@qq.com (刀刀)</author>
+            <category>悟道</category>
+        </item>
         <item>
             <title><![CDATA[hello world]]></title>
-            <link>https://daoodao.dev/code-docs/blog/2024/01/01/helllo-world</link>
-            <guid>https://daoodao.dev/code-docs/blog/2024/01/01/helllo-world</guid>
+            <link>https://daodao.bot/code-docs/blog/2024/01/01/helllo-world</link>
+            <guid>https://daodao.bot/code-docs/blog/2024/01/01/helllo-world</guid>
             <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[---]]></description>
             <content:encoded><![CDATA[<hr>
