@@ -10,20 +10,20 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: '读读代码',
+    title: '读读文档',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        读读代码
+        读读文档
       </>
     ),
   },
   {
-    title: '写写文档',
+    title: '写写代码',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        写写文档
+        写写代码
       </>
     ),
   },

@@ -4,11 +4,11 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Code Docs',
-  tagline: '读读代码，写写文档，看看博客',
+  tagline: '读读文档，写写代码，看看博客',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://daoodao.dev',
+  url: 'https://daodao.bot',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   // baseUrl: '/',
@@ -24,14 +24,16 @@ const config: Config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'throw',
+  onBrokenMarkdownLinks: 'throw',
+  onDuplicateRoutes: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh',
-    locales: ['zh'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -60,6 +62,11 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'Code Docs',
       logo: {
@@ -69,15 +76,15 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'codeSidebar',
+          sidebarId: 'languageSidebar',
+          label: 'Language',
           position: 'left',
-          label: 'Code',
         },
         {
           type: 'docSidebar',
-          sidebarId: 'demoSidebar',
+          sidebarId: 'operationSidebar',
+          label: 'Operation',
           position: 'left',
-          label: 'Demo',
         },
         {
           to: '/blog',
@@ -114,12 +121,12 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Code',
-              to: '/docs/code',
+              label: 'Language',
+              to: '/docs/language',
             },
             {
-              label: 'Demo',
-              to: '/docs/demo',
+              label: 'Operation',
+              to: '/docs/operation',
             },
           ],
         },
@@ -135,10 +142,6 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/daodao-bot/code-docs',

@@ -1,6 +1,7 @@
 ---
 authors: DaoDao
-tags: [hello]
+tags:
+  - hello
 ---
 
 # hello world

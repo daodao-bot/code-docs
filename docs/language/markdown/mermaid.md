@@ -1,8 +1,9 @@
 ---
+sidebar_position: 2
 description: mermaid 是一个基于 JavaScript 的图表绘制工具，它使用 Markdown 启发的文本定义和渲染器来创建和修改复杂的图表。
 ---
 
-# mermaid
+# Mermaid
 
 ---
 

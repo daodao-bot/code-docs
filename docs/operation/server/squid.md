@@ -1,8 +1,9 @@
 ---
+sidebar_position: 2
 description: 描述：Squid是一个支持HTTP、HTTPS、FTP等的Web缓存代理。它通过缓存和重用经常请求的网页来减少带宽并提高响应时间。
 ---
 
-# squid
+# Squid
 
 官网：[Squid](http://www.squid-cache.org/)
 

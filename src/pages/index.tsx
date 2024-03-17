@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Code Docs`}
-      description="读读代码，写写文档，看看博客">
+      description="读读文档，写写代码，看看博客">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

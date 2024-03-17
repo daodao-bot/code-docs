@@ -1,8 +1,9 @@
 ---
+sidebar_position: 1
 description: Nginx 是一款高性能的开源 Web 服务器和反向代理服务器。
 ---
 
-# nginx
+# Nginx
 
 ---
 
